@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout — UnderWave</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body data-page="checkout">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html">← UnderWave</a>
+      </div>
+    </header>
+
+    <main class="container" style="padding:1.5rem 0 2rem">
+      <h1 style="margin:.2rem 0 1rem">Checkout</h1>
+      <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:1rem">
+        <section>
+          <form class="card" style="padding:1rem" id="ckForm">
+            <h3 style="margin:.2rem 0 1rem">Contact</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
+              <label>
+                <div class="muted">First Name</div>
+                <input class="input" placeholder="John" required />
+              </label>
+              <label>
+                <div class="muted">Last Name</div>
+                <input class="input" placeholder="Doe" required />
+              </label>
+              <label style="grid-column:1/-1">
+                <div class="muted">Email</div>
+                <input class="input" type="email" placeholder="you@example.com" required />
+              </label>
+            </div>
+
+            <h3 style="margin:1rem 0 .6rem">Shipping</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
+              <label style="grid-column:1/-1">
+                <div class="muted">Address</div>
+                <input class="input" placeholder="123 Main St" required />
+              </label>
+              <label>
+                <div class="muted">City</div>
+                <input class="input" placeholder="City" required />
+              </label>
+              <label>
+                <div class="muted">Postal Code</div>
+                <input class="input" placeholder="12345" required />
+              </label>
+            </div>
+
+            <h3 style="margin:1rem 0 .6rem">Payment</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem">
+              <label style="grid-column:1/-1">
+                <div class="muted">Card Number</div>
+                <input class="input" inputmode="numeric" placeholder="4242 4242 4242 4242" required />
+              </label>
+              <label>
+                <div class="muted">Expiry</div>
+                <input class="input" placeholder="MM/YY" required />
+              </label>
+              <label>
+                <div class="muted">CVV</div>
+                <input class="input" inputmode="numeric" placeholder="123" required />
+              </label>
+            </div>
+
+            <div style="margin-top:1rem;display:flex;gap:.6rem">
+              <button class="btn primary" id="ckPlaceOrder">Place order</button>
+              <a href="../index.html" class="btn soft">Continue shopping</a>
+            </div>
+          </form>
+        </section>
+
+        <aside class="card" style="padding:1rem">
+          <h3 style="margin:.2rem 0 1rem">Order summary</h3>
+          <div id="ckItems" style="display:flex;flex-direction:column;gap:.6rem"></div>
+          <div class="cart-row" style="padding:.6rem 0">
+            <span>Subtotal</span>
+            <strong id="ckSubtotal">$0.00</strong>
+          </div>
+          <p class="muted">Shipping and taxes calculated at payment.</p>
+        </aside>
+      </div>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      // small utility styles for inputs
+      (function(){
+        const css = `.input{width:100%;padding:.6rem .7rem;border-radius:12px;border:1px solid var(--outline);background:var(--surface);color:var(--text)}`;
+        const s = document.createElement('style'); s.textContent = css; document.head.appendChild(s);
+      })();
+    </script>
+    <script src="../js/app.js"></script>
+  </body>
+  </html>
+
+
