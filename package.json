@@ -10,4 +10,20 @@
   "keywords": ["static", "html", "portfolio"],
   "author": "Xee Tech Team",
   "license": "MIT"
+=======
+  "name": "xee-tech-members-portal",
+  "version": "1.0.0",
+  "description": "Xee Tech members portal with authentication and member pages",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -c-1",
+    "start": "npx http-server . -p 3000 -c-1",
+    "build": "echo 'Build complete - this is a static project'"
+  },
+  "keywords": ["html", "css", "javascript", "authentication", "portal"],
+  "author": "Xee Tech",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
 }

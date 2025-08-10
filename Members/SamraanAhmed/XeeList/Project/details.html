@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Details - XeeList</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-top">
+                <h1 class="site-title">XeeList</h1>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="search.html" class="nav-link">Search</a>
+                    <a href="#" class="nav-link active">Details</a>
+                </nav>
+            </div>
+            <p class="site-subtitle">Anime Details & Information</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Loading State -->
+        <section class="details-loading-section" id="details-loading">
+            <div class="details-container">
+                <div class="loading-indicator">Loading anime details...</div>
+            </div>
+        </section>
+
+        <!-- Error State -->
+        <section class="details-error-section" id="details-error" style="display: none;">
+            <div class="details-container">
+                <div class="error-message">
+                    <h2>Anime Not Found</h2>
+                    <p>The anime you're looking for doesn't exist or couldn't be loaded.</p>
+                    <a href="index.html" class="back-home-btn">Back to Home</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anime Details Content -->
+        <section class="anime-details-section" id="anime-details" style="display: none;">
+            <div class="details-container">
+                <!-- Hero Section with Basic Info -->
+                <div class="anime-hero">
+                    <div class="anime-poster">
+                        <img id="anime-poster-img" class="poster-image" src="" alt="Anime Poster">
+                    </div>
+                    <div class="anime-hero-info">
+                        <h1 id="anime-title" class="anime-detail-title"></h1>
+                        <p id="anime-title-english" class="anime-title-alt"></p>
+                        <p id="anime-title-japanese" class="anime-title-alt"></p>
+                        
+                        <div class="anime-meta-grid">
+                            <div class="meta-item">
+                                <span class="meta-label">Rating</span>
+                                <div class="meta-value">
+                                    <span class="rating-star">★</span>
+                                    <span id="anime-rating" class="rating-large">N/A</span>
+                                </div>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Type</span>
+                                <span id="anime-type" class="meta-value">N/A</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Episodes</span>
+                                <span id="anime-episodes" class="meta-value">N/A</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Status</span>
+                                <span id="anime-status" class="meta-value">N/A</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Duration</span>
+                                <span id="anime-duration" class="meta-value">N/A</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Year</span>
+                                <span id="anime-year" class="meta-value">N/A</span>
+                            </div>
+                        </div>
+
+                        <div class="anime-genres-detail" id="anime-genres-detail"></div>
+                    </div>
+                </div>
+
+                <!-- Synopsis Section -->
+                <div class="details-section">
+                    <h2 class="section-heading">Synopsis</h2>
+                    <div class="synopsis-container">
+                        <p id="anime-synopsis" class="synopsis-text">Loading synopsis...</p>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="details-grid">
+                    <!-- Studio & Producer Info -->
+                    <div class="details-section">
+                        <h3 class="section-heading">Production</h3>
+                        <div class="production-info">
+                            <div class="production-item">
+                                <span class="production-label">Studios:</span>
+                                <div id="anime-studios" class="production-value">N/A</div>
+                            </div>
+                            <div class="production-item">
+                                <span class="production-label">Producers:</span>
+                                <div id="anime-producers" class="production-value">N/A</div>
+                            </div>
+                            <div class="production-item">
+                                <span class="production-label">Source:</span>
+                                <span id="anime-source" class="production-value">N/A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="details-section">
+                        <h3 class="section-heading">Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">Score</span>
+                                <span id="anime-score-detail" class="stat-value">N/A</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Rank</span>
+                                <span id="anime-rank" class="stat-value">N/A</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Popularity</span>
+                                <span id="anime-popularity" class="stat-value">N/A</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Members</span>
+                                <span id="anime-members" class="stat-value">N/A</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Favorites</span>
+                                <span id="anime-favorites" class="stat-value">N/A</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Air Date Information -->
+                <div class="details-section">
+                    <h3 class="section-heading">Broadcast Information</h3>
+                    <div class="broadcast-info">
+                        <div class="broadcast-item">
+                            <span class="broadcast-label">Aired:</span>
+                            <span id="anime-aired" class="broadcast-value">N/A</span>
+                        </div>
+                        <div class="broadcast-item">
+                            <span class="broadcast-label">Season:</span>
+                            <span id="anime-season" class="broadcast-value">N/A</span>
+                        </div>
+                        <div class="broadcast-item">
+                            <span class="broadcast-label">Broadcast:</span>
+                            <span id="anime-broadcast" class="broadcast-value">N/A</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- External Links -->
+                <div class="details-section">
+                    <h3 class="section-heading">External Links</h3>
+                    <div class="external-links" id="external-links">
+                        <a id="mal-link" href="#" target="_blank" class="external-link" style="display: none;">
+                            <span class="link-icon">📖</span>
+                            View on MyAnimeList
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="details-navigation">
+                    <a href="javascript:history.back()" class="nav-btn back-btn">← Back</a>
+                    <a href="index.html" class="nav-btn home-btn">🏠 Home</a>
+                    <a href="search.html" class="nav-btn search-btn">🔍 Search</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2024 XeeList. Powered by <a href="https://jikan.moe/" target="_blank">Jikan API</a></p>
+        </div>
+    </footer>
+
+    <script src="details.js"></script>
+</body>
+</html>

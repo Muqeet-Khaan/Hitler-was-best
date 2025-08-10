@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Kuromi's Nightmare Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Quicksand:wght@300;400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Learn about Kuromi's Nightmare Shop - the spookiest kawaii store in the universe">
+</head>
+<body>
+    <!-- Seasonal Banner -->
+    <div class="seasonal-banner" id="seasonalBanner">
+        <div class="banner-content">
+            <span class="bat-icon">🦇</span>
+            <span>Free Shipping Over $50! Limited Time Only</span>
+            <span class="bat-icon">🦇</span>
+        </div>
+        <button class="banner-close" id="bannerClose">
+            <span class="skull-x">💀</span>
+        </button>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar sticky-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">
+                    <span class="kuromi-face">😈</span>
+                    <span class="shop-name">Kuromi's Nightmare Shop</span>
+                    <div class="logo-wink"></div>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-links">
+                    <div class="nav-item dropdown">
+                        <a href="shop.html" class="nav-link">Shop <span class="dropdown-arrow">▼</span></a>
+                        <div class="dropdown-menu">
+                            <a href="plushies.html" class="dropdown-link">Plushies</a>
+                            <a href="accessories.html" class="dropdown-link">Accessories</a>
+                            <a href="clothing.html" class="dropdown-link">Clothing</a>
+                            <a href="home-decor.html" class="dropdown-link">Home Decor</a>
+                        </div>
+                    </div>
+                    <a href="trending.html" class="nav-link">Trending</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                </div>
+
+                <!-- Search Icon -->
+                <div class="search-container" id="searchContainer">
+                    <button class="search-toggle" id="searchToggle">🔍</button>
+                    <div class="search-dropdown" id="searchDropdown">
+                        <input type="text" class="search-input" placeholder="What's haunting you today?" id="searchInput">
+                        <button class="search-submit" id="searchSubmit">Search</button>
+                    </div>
+                </div>
+
+                <!-- Cart Icon -->
+                <div class="cart-container" id="cartContainer">
+                    <div class="cart-icon">
+                        <span class="kuromi-bag">👜</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="about-main">
+        <!-- Page Header -->
+        <section class="page-header about-header">
+            <div class="container">
+                <h1 class="page-title">
+                    <span class="bat-icon">🦇</span>
+                    About Kuromi's Nightmare Shop
+                    <span class="bat-icon">🦇</span>
+                </h1>
+                <p class="page-subtitle">The most spookily kawaii corner of the internet</p>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="story-section">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2>Our Nightmare Story</h2>
+                        <p>Welcome to the most delightfully dark corner of the internet! Kuromi's Nightmare Shop was born from a dream... well, actually a nightmare, but a really cute one!</p>
+                        
+                        <p>Founded in the depths of kawaii hell by Kuromi herself, our shop brings you the perfect blend of gothic charm and adorable chaos. We believe that being spooky doesn't mean you can't be cute, and being cute doesn't mean you can't embrace your dark side.</p>
+                        
+                        <p>Every item in our collection is hand-picked (with tiny devil claws) to bring a little nightmare magic to your everyday life. From cursed plushies that are definitely not haunted (probably) to gothic lolita fashion that'll make you the envy of both angels and demons, we've got everything you need to embrace your inner nightmare princess.</p>
+                    </div>
+                    <div class="story-image">
+                        <div class="kuromi-large">😈</div>
+                        <div class="sparkles">✨✨✨</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Badges Section -->
+        <section class="trust-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Our Nightmare?</h2>
+                <div class="trust-badges-expanded">
+                    <div class="trust-badge-large">
+                        <span class="badge-icon-large">👻</span>
+                        <h3>100% Possession-Free</h3>
+                        <p>All our items are guaranteed to be free of unwanted spiritual attachments. We triple-check with our in-house exorcist!</p>
+                    </div>
+                    <div class="trust-badge-large">
+                        <span class="badge-icon-large">🎀</span>
+                        <h3>Kawaii Guaranteed</h3>
+                        <p>If it doesn't make you go "aww" while simultaneously giving you chills, we'll give you your money back!</p>
+                    </div>
+                    <div class="trust-badge-large">
+                        <span class="badge-icon-large">🦇</span>
+                        <h3>Hellhound Shipping</h3>
+                        <p>Our loyal hellhounds deliver your packages faster than you can say "nightmare". Plus, they're surprisingly gentle with fragile items!</p>
+                    </div>
+                    <div class="trust-badge-large">
+                        <span class="badge-icon-large">💜</span>
+                        <h3>Kuromi Approved</h3>
+                        <p>Every product gets personal approval from Kuromi herself. If it's not spooky-cute enough, it doesn't make the cut!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-content">
+                    <h2>Our Dark Mission</h2>
+                    <div class="mission-points">
+                        <div class="mission-point">
+                            <span class="mission-icon">🌙</span>
+                            <div class="mission-text">
+                                <h3>Embrace Your Dark Side</h3>
+                                <p>We believe everyone has a little darkness in them, and that's perfectly okay! Our products help you express your gothic kawaii aesthetic with pride.</p>
+                            </div>
+                        </div>
+                        <div class="mission-point">
+                            <span class="mission-icon">💖</span>
+                            <div class="mission-text">
+                                <h3>Spread Spooky Joy</h3>
+                                <p>Just because something is spooky doesn't mean it can't bring happiness! We're on a mission to prove that darkness and joy can coexist beautifully.</p>
+                            </div>
+                        </div>
+                        <div class="mission-point">
+                            <span class="mission-icon">🎭</span>
+                            <div class="mission-text">
+                                <h3>Celebrate Uniqueness</h3>
+                                <p>Normal is overrated! We celebrate all the wonderfully weird, beautifully bizarre, and perfectly peculiar individuals who dare to be different.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Nightmare Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">😈</div>
+                        <h3>Kuromi</h3>
+                        <p class="member-title">Chief Nightmare Officer</p>
+                        <p class="member-description">The mastermind behind it all! Kuromi oversees every aspect of the shop with her signature blend of mischief and cuteness.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">��</div>
+                        <h3>Baku</h3>
+                        <p class="member-title">Dream Quality Inspector</p>
+                        <p class="member-description">Makes sure all our products meet the highest standards of spookiness while maintaining maximum kawaii levels.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">🌙</div>
+                        <h3>Luna</h3>
+                        <p class="member-title">Midnight Customer Service</p>
+                        <p class="member-description">Available 24/7 to help with your spooky shopping needs. She's literally a night owl, so she loves the late-night shifts!</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">👻</div>
+                        <h3>Casper</h3>
+                        <p class="member-title">Shipping Specialist</p>
+                        <p class="member-description">Our friendly ghost ensures your packages are delivered safely and haunt-free. He's been in the business for centuries!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Summon Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-method">
+                        <span class="contact-icon">📧</span>
+                        <h3>Email Spell</h3>
+                        <p>nightmare@kuromishop.hell</p>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-icon">🌙</span>
+                        <h3>Midnight Hotline</h3>
+                        <p>1-800-NIGHTMARE</p>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-icon">🦇</span>
+                        <h3>Bat Signal</h3>
+                        <p>Look for our purple bat signal in the sky</p>
+                    </div>
+                    <div class="contact-method">
+                        <span class="contact-icon">💬</span>
+                        <h3>Kuromi Chat</h3>
+                        <p>Use our chatbot for instant nightmare assistance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Join Kuromi's Cult... I Mean Club!</h3>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" class="newsletter-input" placeholder="Your email for spooky updates" required>
+                        <button type="submit" class="newsletter-btn">Subscribe</button>
+                    </form>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="trending.html">Trending</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Follow the Nightmare</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon instagram">📷</a>
+                        <a href="#" class="social-icon twitter">🐦</a>
+                        <a href="#" class="social-icon tiktok">🎵</a>
+                        <a href="#" class="social-icon youtube">📺</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Kuromi's Nightmare Shop. All rights reserved.</p>
+                <p class="disclaimer">This is a fan-made website. Kuromi is a trademark of Sanrio Co., Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Kuromi Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-toggle" id="chatbotToggle">
+            <span class="kuromi-chat-face">😈</span>
+            <div class="chat-notification" id="chatNotification">💬</div>
+        </div>
+        
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="kuromi-avatar">😈</div>
+                <div class="chatbot-title">
+                    <h4>Kuromi</h4>
+                    <p>Your nightmare assistant</p>
+                </div>
+                <button class="chatbot-close" id="chatbotClose">×</button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chat-message bot-message">
+                    <div class="message-content">
+                        Want to know more about our nightmare shop? I'm happy to share! 😈
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input-container">
+                <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your nightmare here...">
+                <button class="chatbot-send" id="chatbotSend">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Nightmare Bag</h3>
+            <button class="cart-close" id="cartClose">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <span class="empty-icon">👜</span>
+                <p>Your nightmare bag is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total: $<span id="cartTotal">0.00</span></span>
+            </div>
+            <button class="checkout-btn">Proceed to Summoning</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

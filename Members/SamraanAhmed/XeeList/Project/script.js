@@ -21,13 +21,13 @@ function formatGenres(genres) {
 function createAnimeCard(anime) {
     const card = document.createElement('div');
     card.className = 'anime-card';
-    
+
     const genres = formatGenres(anime.genres || []);
     const rating = anime.score ? anime.score.toFixed(1) : 'N/A';
-    
+
     card.innerHTML = `
-        <img class="anime-image" 
-             src="${anime.images?.jpg?.image_url || anime.images?.jpg?.large_image_url || 'https://via.placeholder.com/200x280?text=No+Image'}" 
+        <img class="anime-image"
+             src="${anime.images?.jpg?.image_url || anime.images?.jpg?.large_image_url || 'https://via.placeholder.com/200x280?text=No+Image'}"
              alt="${anime.title || anime.title_english || 'Anime'}"
              loading="lazy"
              onerror="this.src='https://via.placeholder.com/200x280?text=No+Image'">
@@ -43,7 +43,18 @@ function createAnimeCard(anime) {
             <div class="anime-status">${anime.status || anime.aired?.string || 'Unknown'}</div>
         </div>
     `;
-    
+
+    // Make card clickable - navigate to details page
+    if (anime.mal_id) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            window.location.href = `details.html?id=${anime.mal_id}`;
+        });
+
+        // Add hover effect indication
+        card.setAttribute('title', 'Click to view details');
+    }
+
     return card;
 }
 
